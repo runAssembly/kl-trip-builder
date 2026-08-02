@@ -56,6 +56,9 @@ header{padding:26px 0 0}
 
 /* ---------- layout ---------- */
 .cols{display:grid;grid-template-columns:1fr 356px;gap:40px;align-items:start;padding-bottom:64px}
+/* The aside has to span the full row, not just its own content — a sticky child can only travel
+   as far as its parent's box, so a content-height aside lets the quote scroll away halfway down. */
+.cols>aside{align-self:stretch}
 @media(max-width:900px){.cols{grid-template-columns:1fr;gap:0;padding-bottom:0}}
 
 section{margin-bottom:42px}
